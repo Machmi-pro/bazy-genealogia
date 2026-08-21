@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bazy i wyszukiwarki genealogiczne</title>
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --card-bg: #ffffff;
+    --accent: #3f6b4f;
+    --accent-light: #e8ece6;
+    --text-main: #2b2b2b;
+    --text-sub: #6b6b6b;
+    --border: #e2e0da;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text-main);
+  }
+
+  header {
+    padding: 28px 20px 18px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0 0 6px;
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+
+  header p {
+    margin: 0;
+    color: var(--text-sub);
+    font-size: 0.95rem;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 8px 16px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+
+  a.card:active {
+    transform: scale(0.98);
+  }
+
+  @media (hover: hover) {
+    a.card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transform: translateY(-1px);
+    }
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 4px;
+  }
+
+  .card-url {
+    font-size: 0.78rem;
+    color: var(--text-sub);
+    word-break: break-all;
+    margin: 0 0 8px;
+  }
+
+  .card-desc {
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: var(--text-main);
+    margin: 0;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--text-sub);
+    font-size: 0.78rem;
+    padding: 10px 20px 30px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bazy i wyszukiwarki genealogiczne</h1>
+  <p>Zbiór przydatnych linków do poszukiwań rodzinnych</p>
+</header>
+
+<main>
+
+  <a class="card" href="https://geneteka.genealodzy.pl/index.php" target="_blank" rel="noopener">
+    <span class="tag">Indeksy metrykalne</span>
+    <p class="card-title">Geneteka</p>
+    <p class="card-url">geneteka.genealodzy.pl</p>
+    <p class="card-desc">Największa polska baza indeksów aktów urodzeń, małżeństw i zgonów z parafii i USC. Punkt startowy do większości poszukiwań — szukaj po nazwisku, parafii i zakresie lat, by znaleźć numer aktu i archiwum, gdzie znajduje się skan.</p>
+  </a>
+
+  <a class="card" href="https://geneszukacz.genealodzy.pl" target="_blank" rel="noopener">
+    <span class="tag">Wyszukiwarka zbiorcza</span>
+    <p class="card-title">Geneszukacz</p>
+    <p class="card-url">geneszukacz.genealodzy.pl</p>
+    <p class="card-desc">Wyszukiwarka przeszukująca jednocześnie wiele baz PTG (Geneteka, Metryki, Archiwa, Cmentarze i inne) jednym zapytaniem. Dobra, gdy nie wiadomo, w której bazie szukać danej osoby.</p>
+  </a>
+
+  <a class="card" href="https://metryki.genealodzy.pl" target="_blank" rel="noopener">
+    <span class="tag">Skany metryk</span>
+    <p class="card-title">Skanoteka (metryki.genealodzy.pl)</p>
+    <p class="card-url">metryki.genealodzy.pl</p>
+    <p class="card-desc">Baza skanów ksiąg metrykalnych Polskiego Towarzystwa Genealogicznego, często linkowana bezpośrednio z wyników wyszukiwania w Genetece. Tu obejrzysz skan konkretnego aktu po jego namierzeniu w indeksach.</p>
+  </a>
+
+  <a class="card" href="https://metryki.genbaza.pl" target="_blank" rel="noopener">
+    <span class="tag">Skany metryk</span>
+    <p class="card-title">Metryki GenBaza</p>
+    <p class="card-url">metryki.genbaza.pl</p>
+    <p class="card-desc">Kolejny duży zbiór skanów ksiąg metrykalnych i USC, obejmujący m.in. zasoby archiwów w Kielcach, Łodzi, Warszawie, Gdańsku i Koszalinie. Dobre uzupełnienie Skanoteki, gdy dana księga nie znajduje się tam.</p>
+  </a>
+
+  <a class="card" href="https://parafie.genealodzy.pl" target="_blank" rel="noopener">
+    <span class="tag">Informator</span>
+    <p class="card-title">Katalog Zasobów Metrykalnych (parafie.genealodzy.pl)</p>
+    <p class="card-url">parafie.genealodzy.pl</p>
+    <p class="card-desc">Baza PTG z danymi teleadresowymi ok. 11 000 parafii oraz informacją, gdzie fizycznie przechowywane są ich księgi metrykalne i za jakie lata. Przydatna do ustalenia, gdzie szukać ksiąg spoza zasięgu Geneteki.</p>
+  </a>
+
+  <a class="card" href="https://www.szukajwarchiwach.gov.pl/strona_glowna" target="_blank" rel="noopener">
+    <span class="tag">Skany archiwalne</span>
+    <p class="card-title">Szukaj w Archiwach</p>
+    <p class="card-url">szukajwarchiwach.gov.pl</p>
+    <p class="card-desc">Oficjalny portal polskich archiwów państwowych ze zdigitalizowanymi księgami metrykalnymi, aktami USC i innymi dokumentami. Tu znajdziesz same skany po ustaleniu sygnatury/numeru aktu (np. z Geneteki).</p>
+  </a>
+
+  <a class="card" href="https://archiwa.gov.pl/szukaj/genealogia/" target="_blank" rel="noopener">
+    <span class="tag">Informator</span>
+    <p class="card-title">Archiwa.gov.pl — informator genealogiczny</p>
+    <p class="card-url">archiwa.gov.pl/szukaj/genealogia</p>
+    <p class="card-desc">Oficjalny serwis Naczelnej Dyrekcji Archiwów Państwowych z informacjami, gdzie fizycznie przechowywane są księgi metrykalne poszczególnych parafii i USC. Przydatny do ustalenia właściwego archiwum przed wizytą lub zamówieniem skanu.</p>
+  </a>
+
+  <a class="card" href="https://wojak.genealodzy.pl" target="_blank" rel="noopener">
+    <span class="tag">I wojna światowa / Austro-Węgry</span>
+    <p class="card-title">Projekt Wojak</p>
+    <p class="card-url">wojak.genealodzy.pl</p>
+    <p class="card-desc">Indeksacja kart ewidencyjnych żołnierzy armii austro-węgierskiej (C.K. Armia) z lat 1865–1918. Bardzo przydatne przy przodkach z Galicji służących w wojsku zaborcy austriackiego przed i w trakcie I wojny światowej.</p>
+  </a>
+
+  <a class="card" href="https://legiony.genealodzy.pl" target="_blank" rel="noopener">
+    <span class="tag">Legiony Polskie</span>
+    <p class="card-title">Legiony 1918–1920 (genealodzy.pl)</p>
+    <p class="card-url">legiony.genealodzy.pl</p>
+    <p class="card-desc">Baza PTG dotycząca żołnierzy Legionów Polskich i wojen 1918–1920 (wojna polsko-bolszewicka, powstania śląskie/wielkopolskie). Sprawdź, jeśli przodek mógł walczyć o odzyskaną niepodległość.</p>
+  </a>
+
+  <a class="card" href="https://straty.genealodzy.pl" target="_blank" rel="noopener">
+    <span class="tag">Polegli 1918–1920</span>
+    <p class="card-title">Straty 1918–1920 / Polegli w I WŚ (genealodzy.pl)</p>
+    <p class="card-url">straty.genealodzy.pl</p>
+    <p class="card-desc">Baza strat żołnierzy polskich z lat 1918–1920 oraz poległych w I wojnie światowej — blisko 50 tys. nazwisk. Uzupełnienie projektu Wojak i Legionów przy poszukiwaniu losów wojskowych przodków z tego okresu.</p>
+  </a>
+
+  <a class="card" href="https://genealogia.okiem.pl/powstancy-styczniowi" target="_blank" rel="noopener">
+    <span class="tag">Powstanie Styczniowe 1863</span>
+    <p class="card-title">Powstańcy Styczniowi (Genealogia Polaków)</p>
+    <p class="card-url">genealogia.okiem.pl/powstancy-styczniowi</p>
+    <p class="card-desc">Największa baza uczestników Powstania Styczniowego 1863–1865: biogramy, mogiły, bitwy i miejsca pamięci z dokładnymi lokalizacjami GPS. Dobry punkt startowy, jeśli podejrzewasz udział przodka w zrywie niepodległościowym.</p>
+  </a>
+
+  <a class="card" href="https://collections.arolsen-archives.org/en/" target="_blank" rel="noopener">
+    <span class="tag">Obozy / roboty przymusowe (DE)</span>
+    <p class="card-title">Arolsen Archives</p>
+    <p class="card-url">collections.arolsen-archives.org</p>
+    <p class="card-desc">To ta niemiecka baza — Międzynarodowa Służba Poszukiwań z Bad Arolsen. Ponad 26 mln zdigitalizowanych dokumentów o ofiarach represji nazistowskich: robotnikach przymusowych, więźniach obozów koncentracyjnych i osobach przesiedlonych (DP). Wyszukiwarka i skany dostępne online za darmo.</p>
+  </a>
+
+  <a class="card" href="https://www.1944.pl/powstancze-biogramy.html" target="_blank" rel="noopener">
+    <span class="tag">Powstanie Warszawskie</span>
+    <p class="card-title">Powstańcze Biogramy (Muzeum Powstania Warszawskiego)</p>
+    <p class="card-url">1944.pl/powstancze-biogramy.html</p>
+    <p class="card-desc">Baza biogramów uczestników Powstania Warszawskiego 1944 prowadzona przez Muzeum Powstania Warszawskiego — ponad 50 tys. zweryfikowanych biogramów żołnierzy AK i cywilnych ofiar. Zawiera też bazę grobów powstańców.</p>
+  </a>
+
+  <a class="card" href="https://indeksrepresjonowanych.pl" target="_blank" rel="noopener">
+    <span class="tag">Represje / jeńcy</span>
+    <p class="card-title">Wyszukiwarka Osób Represjonowanych (IPN)</p>
+    <p class="card-url">indeksrepresjonowanych.pl</p>
+    <p class="card-desc">Baza Instytutu Pamięci Narodowej z danymi osób represjonowanych przez aparat komunistyczny i okupacyjny — więźniów, zesłańców, ofiar wywózek. Dobre uzupełnienie strat.pl i Arolsen przy szukaniu losów wojennych i powojennych przodków.</p>
+  </a>
+
+  <a class="card" href="https://straty.pl/szukaj-osoby.php" target="_blank" rel="noopener">
+    <span class="tag">Ofiary wojny</span>
+    <p class="card-title">Straty.pl</p>
+    <p class="card-url">straty.pl</p>
+    <p class="card-desc">Baza osób represjonowanych, zaginionych i poległych w czasie II wojny światowej i okresu powojennego. Warto sprawdzić, jeśli w drzewie są luki związane z wojną, obozami, zesłaniami lub egzekucjami.</p>
+  </a>
+
+  <a class="card" href="https://mogily.pl/start" target="_blank" rel="noopener">
+    <span class="tag">Cmentarze</span>
+    <p class="card-title">Mogiły.pl</p>
+    <p class="card-url">mogily.pl</p>
+    <p class="card-desc">Baza grobów i cmentarzy w Polsce z opisami i zdjęciami nagrobków. Pomocna do potwierdzania dat zgonu, miejsc pochówku oraz odnajdywania rodzinnych grobowców.</p>
+  </a>
+
+  <a class="card" href="https://grobonet.com" target="_blank" rel="noopener">
+    <span class="tag">Cmentarze</span>
+    <p class="card-title">Grobonet</p>
+    <p class="card-url">grobonet.com</p>
+    <p class="card-desc">Wyszukiwarka grobów działająca dla wielu cmentarzy komunalnych i parafialnych w Polsce (wyszukiwanie po cmentarzu i nazwisku). Alternatywa/uzupełnienie dla Mogiły.pl — dobrze sprawdzić obie bazy.</p>
+  </a>
+
+  <a class="card" href="https://www.wadt.pl/wyszukiwarka" target="_blank" rel="noopener">
+    <span class="tag">Dowody tożsamości</span>
+    <p class="card-title">WADT — Wyszukiwarka Archiwalnych Dowodów Tożsamości</p>
+    <p class="card-url">wadt.pl/wyszukiwarka</p>
+    <p class="card-desc">Narzędzie ułatwiające dostęp do historycznych rejestrów i dokumentów tożsamości. Przydatne przy poszukiwaniu archiwalnych dowodów osobistych i podobnych dokumentów identyfikacyjnych przodków.</p>
+  </a>
+
+</main>
+
+<footer>
+  Kliknij kafelek, aby otworzyć stronę w nowej karcie.
+</footer>
+
+</body>
+</html>
